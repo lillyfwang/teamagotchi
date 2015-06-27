@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C5BE5ACA1B3F21FA00564FB8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BE5AC91B3F21FA00564FB8 /* HealthKit.framework */; };
 		FD6C35E41B3E6E49009386F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C35E31B3E6E49009386F6 /* main.m */; };
 		FD6C35E71B3E6E49009386F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C35E61B3E6E49009386F6 /* AppDelegate.m */; };
 		FD6C35EA1B3E6E49009386F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C35E91B3E6E49009386F6 /* ViewController.m */; };
@@ -64,7 +63,6 @@
 
 /* Begin PBXFileReference section */
 		C5BE5AC61B3F20FC00564FB8 /* teamagotchi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = teamagotchi.entitlements; sourceTree = "<group>"; };
-		C5BE5AC91B3F21FA00564FB8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		FD6C35DE1B3E6E49009386F6 /* teamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6C35E21B3E6E49009386F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD6C35E31B3E6E49009386F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5BE5ACA1B3F21FA00564FB8 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +118,6 @@
 		FD6C35D51B3E6E49009386F6 = {
 			isa = PBXGroup;
 			children = (
-				C5BE5AC91B3F21FA00564FB8 /* HealthKit.framework */,
 				FD6C35E01B3E6E49009386F6 /* teamagotchi */,
 				FD6C35FA1B3E6E49009386F6 /* teamagotchiTests */,
 				FD6C360C1B3E6E74009386F6 /* teamagotchi WatchKit Extension */,
@@ -310,7 +306,7 @@
 						DevelopmentTeam = Y5LSAH94ZT;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -545,7 +541,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = teamagotchi/teamagotchi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = teamagotchi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -559,7 +554,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = teamagotchi/teamagotchi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = teamagotchi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
