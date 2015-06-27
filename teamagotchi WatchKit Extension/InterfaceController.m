@@ -33,7 +33,7 @@
     if (!notFirstLaunch && _happiness == 0) _happiness = 100;
     NSDate *lastDate = [defaults objectForKey:@"lastCloseDate"];
     NSTimeInterval timeDiff = [[NSDate date] timeIntervalSinceDate:lastDate];
-    double happinessChange = timeDiff / 5;
+    double happinessChange = timeDiff / 10;
     _happiness -= happinessChange;
     
     [self updateHappinessLabel];
@@ -41,7 +41,7 @@
     if (_happiness <= 50) {
         [self changeImage:@"sadPusheen" duration:0.3];
     } else {
-        [self changeImage:@"contentPusheen" duration:0.3];
+        [self changeImage:@"normal" duration:0.3];
     }
 
 }
@@ -68,7 +68,7 @@
         if (_happiness <= 50) {
             [self changeImage:@"sadPusheen" duration:0.3];
         } else {
-            [self changeImage:@"contentPusheen" duration:0.3];
+            [self changeImage:@"normal" duration:0.3];
         }
     });
     
@@ -84,7 +84,7 @@
         if (_happiness <= 50) {
             [self changeImage:@"sadPusheen" duration:0.3];
         } else {
-            [self changeImage:@"contentPusheen" duration:0.3];
+            [self changeImage:@"normal" duration:0.3];
         }
     });
     
@@ -101,7 +101,7 @@
         if (_happiness <= 50) {
             [self changeImage:@"sadPusheen" duration:0.3];
         } else {
-            [self changeImage:@"contentPusheen" duration:0.3];
+            [self changeImage:@"normal" duration:0.3];
         }
     });
     
@@ -118,7 +118,7 @@
         if (_happiness <= 50) {
             [self changeImage:@"sadPusheen" duration:0.3];
         } else {
-            [self changeImage:@"contentPusheen" duration:0.3];
+            [self changeImage:@"normal" duration:0.3];
         }
     });
     
@@ -127,9 +127,25 @@
 
 - (void)changeImage:(NSString *)imageSetName duration:(double)duration {
     [_pusheenImage setImageNamed:imageSetName];
-    [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
-                                                duration:duration
-                                             repeatCount:0];
+    if ([imageSetName  isEqual: @"normal"]) {
+        NSArray *normal = @[@"laserPusheen", @"contentPusheen"];
+        NSString *name = normal[arc4random()%2];
+        
+        [_pusheenImage setImageNamed:name];
+        if ([name isEqual: @"laserPusheen"]) {
+            [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 14)
+                                                  duration:duration
+                                               repeatCount:0];
+        } else {
+            [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
+                                                  duration:duration
+                                               repeatCount:0];
+        }
+    } else {
+        [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
+                                              duration:duration
+                                           repeatCount:0];
+    }
 }
 
 - (void)addHappiness:(int)increment{
