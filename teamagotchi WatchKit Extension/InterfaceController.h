@@ -10,8 +10,10 @@
 #import <Foundation/Foundation.h>
 
 @interface InterfaceController : WKInterfaceController
-@property (weak, nonatomic) IBOutlet WKInterfaceImage *cookiePusheenImage;
-@property (weak, nonatomic) IBOutlet WKInterfaceImage *burritoPusheenImage;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *pusheenImage;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *happinessLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *primaryIcon;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *secondaryIcon;
 
 - (IBAction)doMenuPlay;
 

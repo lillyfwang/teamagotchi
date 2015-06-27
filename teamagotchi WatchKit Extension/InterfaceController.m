@@ -26,7 +26,6 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
-    [_burritoPusheenImage setHidden:YES];
 }
 
 - (void)didDeactivate {
@@ -35,10 +34,25 @@
 }
 
 - (IBAction)doMenuFeed {
+    NSArray *plays = @[@"ricePusheen", @"noodlesPusheen", @"cookiePusheen"];
+    NSString *randomPlay = plays[arc4random()%3];
+    
+    [self changeImage:randomPlay duration:1];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self changeImage:@"contentPusheen" duration:0.5];
+    });
     
 }
 
 - (IBAction)doMenuParty {
+    NSString *randomPlay = @"partyPusheen";
+    
+    [self changeImage:randomPlay duration:1];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self changeImage:@"contentPusheen" duration:0.3];
+    });
 }
 
 - (IBAction)doMenuPlay {
@@ -48,13 +62,13 @@
     [self changeImage:randomPlay duration:1];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self changeImage:@"cookiePusheen" duration:0.5];
+        [self changeImage:@"contentPusheen" duration:0.5];
     });
 }
 
 - (void)changeImage:(NSString *)imageSetName duration:(double)duration {
-    [_cookiePusheenImage setImageNamed:imageSetName];
-    [_cookiePusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
+    [_pusheenImage setImageNamed:imageSetName];
+    [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
                                                 duration:duration
                                              repeatCount:0];
 }

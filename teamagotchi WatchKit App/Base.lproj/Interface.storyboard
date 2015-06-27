@@ -10,13 +10,23 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <group alignment="right" contentMode="right" id="xNl-IC-dMk">
+                        <group width="1" height="25" alignment="left" id="fpr-Cj-PUT">
                             <items>
-                                <label alignment="left" text="10/10" id="SAK-mB-oDj"/>
-                                <imageView width="24" height="22" alignment="left" id="Stv-pv-7R2"/>
+                                <group alignment="left" id="eZc-k2-NLx" userLabel="Happiness Status Group">
+                                    <items>
+                                        <imageView width="24" height="22" alignment="left" id="Stv-pv-7R2" userLabel="Heart Icon"/>
+                                        <label alignment="left" text="100%" id="SAK-mB-oDj"/>
+                                    </items>
+                                </group>
+                                <group alignment="right" id="99h-Vg-NE2" userLabel="Status Icon Group">
+                                    <items>
+                                        <imageView width="24" height="21" alignment="left" id="aDN-Tx-ROB" userLabel="Secondary Icon"/>
+                                        <imageView width="24" height="21" alignment="left" id="lCh-Fs-1t6" userLabel="Primary Icon"/>
+                                    </items>
+                                </group>
                             </items>
                         </group>
-                        <imageView width="136" height="137" alignment="left" image="cookiePusheen" contentMode="scaleAspectFit" animationDuration="0.5" id="QaK-SH-OJw"/>
+                        <imageView width="136" height="137" alignment="left" image="contentPusheen" contentMode="scaleAspectFit" animationDuration="0.5" id="QaK-SH-OJw"/>
                     </items>
                     <menu key="menu" id="3Ga-vn-GSR">
                         <items>
@@ -38,11 +48,14 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="cookiePusheenImage" destination="QaK-SH-OJw" id="8bV-5Y-zbZ"/>
+                        <outlet property="happinessLabel" destination="SAK-mB-oDj" id="TAo-Ne-ZYK"/>
+                        <outlet property="primaryIcon" destination="lCh-Fs-1t6" id="Cne-Am-TCz"/>
+                        <outlet property="pusheenImage" destination="QaK-SH-OJw" id="OU3-cu-OvQ"/>
+                        <outlet property="secondaryIcon" destination="aDN-Tx-ROB" id="l0E-XI-nQp"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="237" y="265"/>
+            <point key="canvasLocation" x="237" y="245.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
