@@ -79,15 +79,6 @@
                                                 duration:duration
                                              repeatCount:0];
 }
-//
-//- (int) happiness {
-//    return _happiness;
-//}
-
-//- (void) setHappiness:(int)happiness {
-//    _happiness = happiness;
-//    [self updateHappinessLabel];
-//}
 
 - (void)addHappiness:(int)increment{
     _happiness += increment;
