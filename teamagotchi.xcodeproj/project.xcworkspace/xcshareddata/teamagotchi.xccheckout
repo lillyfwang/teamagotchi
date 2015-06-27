@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E72F8B89-C854-479C-ABDD-F695B2F754AD</string>
 	<key>IDESourceControlProjectName</key>
-	<string>teamagotchi</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E6C142099C7990020947E506A4EB81F3AE073CA5</key>
 		<string>https://github.com/lillyfwang/teamagotchi.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>teamagotchi.xcodeproj</string>
+	<string>teamagotchi.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E6C142099C7990020947E506A4EB81F3AE073CA5</key>
