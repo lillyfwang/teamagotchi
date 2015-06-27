@@ -14,7 +14,7 @@
                             <items>
                                 <group alignment="left" id="eZc-k2-NLx" userLabel="Happiness Status Group">
                                     <items>
-                                        <imageView width="24" height="22" alignment="left" id="Stv-pv-7R2" userLabel="Heart Icon"/>
+                                        <imageView width="19" height="14" alignment="left" verticalAlignment="center" image="heart" id="Stv-pv-7R2" userLabel="Heart Icon"/>
                                         <label alignment="left" text="100%" id="SAK-mB-oDj"/>
                                     </items>
                                 </group>
