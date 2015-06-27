@@ -10,10 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <dateLabel alignment="left" id="JG4-o5-QEG">
-                            <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
-                            <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
-                        </dateLabel>
+                        <imageView width="134" height="126" alignment="left" image="pusheen" contentMode="scaleAspectFit" animationDuration="1" id="QaK-SH-OJw"/>
                     </items>
                 </controller>
             </objects>
