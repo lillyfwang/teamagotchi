@@ -125,6 +125,22 @@
     [self addHappiness:5];
 }
 
+- (void)doWorkout {
+    NSString *randomPlay = @"workoutPusheen";
+    
+    [self changeImage:randomPlay duration:1];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        if (_happiness <= 50) {
+            [self changeImage:@"sadPusheen" duration:0.3];
+        } else {
+            [self changeImage:@"normal" duration:0.3];
+        }
+    });
+    
+    [self addHappiness:10];
+}
+
 - (void)changeImage:(NSString *)imageSetName duration:(double)duration {
     [_pusheenImage setImageNamed:imageSetName];
     if ([imageSetName  isEqual: @"normal"]) {
