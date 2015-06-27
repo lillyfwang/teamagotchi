@@ -14,6 +14,14 @@
 
 @implementation ViewController
 
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self becomeFirstResponder];
+}
+
 -(void) viewDidLoad {
     // Request to turn on accelerometer and begin receiving accelerometer events
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -42,6 +50,16 @@
                                         [self outputRotationData:gyroData.rotationRate];
                                     }];
 }
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        // User was shaking the device. Post a notification named "shake."
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"shake" object:self];
+    }
+}
+
+
 
 -(void)outputAccelertionData:(CMAcceleration)acceleration
 {
