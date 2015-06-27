@@ -95,7 +95,7 @@
     NSArray *plays = @[@"dinoPusheen", @"nutellaPusheen", @"hpPusheen"];
     NSString *randomPlay = plays[arc4random()%3];
     
-    [self changeImage:randomPlay duration:1];
+    [self changeImage:randomPlay duration:0.7];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         if (_happiness <= 50) {
@@ -134,7 +134,7 @@
         [_pusheenImage setImageNamed:name];
         if ([name isEqual: @"laserPusheen"]) {
             [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 14)
-                                                  duration:duration
+                                                  duration:1
                                                repeatCount:0];
         } else {
             [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
