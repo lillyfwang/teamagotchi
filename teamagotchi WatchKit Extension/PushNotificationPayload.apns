@@ -1,15 +1,15 @@
 {
     "aps": {
         "alert": {
-            "body": "Test message",
-            "title": "Optional title"
+            "body": "Workout earned!",
+            "title": "Log workout"
         },
-        "category": "myCategory"
+        "category": "Workout Notification"
     },
     
     "WatchKit Simulator Actions": [
         {
-            "title": "First Button",
+            "title": "Workout Pusheen",
             "identifier": "firstButtonAction"
         }
     ],
