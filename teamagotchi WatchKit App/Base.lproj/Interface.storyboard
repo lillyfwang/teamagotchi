@@ -10,11 +10,39 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <imageView width="134" height="126" alignment="left" image="pusheen" contentMode="scaleAspectFit" animationDuration="1" id="QaK-SH-OJw"/>
+                        <group alignment="right" contentMode="right" id="xNl-IC-dMk">
+                            <items>
+                                <label alignment="left" text="10/10" id="SAK-mB-oDj"/>
+                                <imageView width="24" height="22" alignment="left" id="Stv-pv-7R2"/>
+                            </items>
+                        </group>
+                        <imageView width="136" height="137" alignment="left" image="cookiePusheen" contentMode="scaleAspectFit" animationDuration="0.5" id="QaK-SH-OJw"/>
                     </items>
+                    <menu key="menu" id="3Ga-vn-GSR">
+                        <items>
+                            <menuItem title="Play" icon="play" id="Rpn-se-4cW">
+                                <connections>
+                                    <action selector="doMenuPlay" destination="AgC-eL-Hgc" id="kS6-c6-4yK"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Feed" icon="accept" id="UjJ-t1-tF2">
+                                <connections>
+                                    <action selector="doMenuFeed" destination="AgC-eL-Hgc" id="TQN-ft-ktE"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Party" icon="block" id="hbe-0G-aYD">
+                                <connections>
+                                    <action selector="doMenuParty" destination="AgC-eL-Hgc" id="Xnh-oA-GKd"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="cookiePusheenImage" destination="QaK-SH-OJw" id="8bV-5Y-zbZ"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="237" y="265"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
