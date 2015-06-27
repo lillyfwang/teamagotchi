@@ -28,6 +28,13 @@
     [super willActivate];
     _happiness = 50;
     [self updateHappinessLabel];
+    
+    if (_happiness <= 50) {
+        [self changeImage:@"sadPusheen" duration:0.3];
+    } else {
+        [self changeImage:@"contentPusheen" duration:0.3];
+    }
+
 }
 
 - (void)didDeactivate {
@@ -42,7 +49,11 @@
     [self changeImage:randomPlay duration:1];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self changeImage:@"contentPusheen" duration:0.5];
+        if (_happiness <= 50) {
+            [self changeImage:@"sadPusheen" duration:0.3];
+        } else {
+            [self changeImage:@"contentPusheen" duration:0.3];
+        }
     });
     
     [self addHappiness:5];
@@ -54,20 +65,28 @@
     [self changeImage:randomPlay duration:1];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self changeImage:@"contentPusheen" duration:0.3];
+        if (_happiness <= 50) {
+            [self changeImage:@"sadPusheen" duration:0.3];
+        } else {
+            [self changeImage:@"contentPusheen" duration:0.3];
+        }
     });
     
     [self addHappiness:5];
 }
 
 - (IBAction)doMenuCostume {
-    NSArray *plays = @[@"dinoPusheen", @"nutellaPusheen"];
-    NSString *randomPlay = plays[arc4random()%2];
+    NSArray *plays = @[@"dinoPusheen", @"nutellaPusheen", @"hpPusheen"];
+    NSString *randomPlay = plays[arc4random()%3];
     
     [self changeImage:randomPlay duration:1];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self changeImage:@"contentPusheen" duration:0.3];
+        if (_happiness <= 50) {
+            [self changeImage:@"sadPusheen" duration:0.3];
+        } else {
+            [self changeImage:@"contentPusheen" duration:0.3];
+        }
     });
     
     [self addHappiness:5];
@@ -80,7 +99,11 @@
     [self changeImage:randomPlay duration:1];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self changeImage:@"contentPusheen" duration:0.5];
+        if (_happiness <= 50) {
+            [self changeImage:@"sadPusheen" duration:0.3];
+        } else {
+            [self changeImage:@"contentPusheen" duration:0.3];
+        }
     });
     
     [self addHappiness:5];
