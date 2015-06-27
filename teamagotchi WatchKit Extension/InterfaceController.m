@@ -16,11 +16,15 @@
 
 
 @implementation InterfaceController
+{
+    int _happiness;
+}
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
     // Configure interface objects here.
+    _happiness = 50;
 }
 
 - (void)willActivate {
@@ -43,6 +47,7 @@
         [self changeImage:@"contentPusheen" duration:0.5];
     });
     
+    _happiness += 5;
 }
 
 - (IBAction)doMenuParty {
@@ -53,6 +58,8 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self changeImage:@"contentPusheen" duration:0.3];
     });
+    
+    _happiness += 5;
 }
 
 - (IBAction)doMenuPlay {
@@ -64,6 +71,8 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self changeImage:@"contentPusheen" duration:0.5];
     });
+    
+    _happiness += 5;
 }
 
 - (void)changeImage:(NSString *)imageSetName duration:(double)duration {
@@ -72,6 +81,29 @@
                                                 duration:duration
                                              repeatCount:0];
 }
+
+- (int) happiness {
+    return _happiness;
+}
+
+- (void) setHappiness:(int)happiness {
+    _happiness = happiness;
+    [self updateHappinessLabel];
+}
+
+- (void) updateHappinessLabel {
+    int newHappiness = MAX(100, _happiness);
+    _happinessLabel.text = [NSString stringWithFormat:@"%d%%", newHappiness];
+}
+
+/*
+private func changeHappiness() {
+    let lastDate = defaults.objectForKey("lastCloseDate")
+    let timeDiff = NSDate.timeIntervalSinceDate(lastDate)
+    let happinessChange = timeDiff / 60
+    happiness -= happinessChange
+}
+*/
 
 @end
 
