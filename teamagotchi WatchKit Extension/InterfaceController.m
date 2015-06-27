@@ -43,8 +43,8 @@
 }
 
 - (IBAction)doMenuFeed {
-    NSArray *plays = @[@"ricePusheen", @"noodlesPusheen", @"cookiePusheen"];
-    NSString *randomPlay = plays[arc4random()%3];
+    NSArray *plays = @[@"ricePusheen", @"noodlesPusheen", @"cookiePusheen", @"cheetosPusheen"];
+    NSString *randomPlay = plays[arc4random()%4];
     
     [self changeImage:randomPlay duration:1];
     
