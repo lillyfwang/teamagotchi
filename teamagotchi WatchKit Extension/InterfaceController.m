@@ -16,20 +16,18 @@
 
 
 @implementation InterfaceController
-{
-    int _happiness;
-}
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
     // Configure interface objects here.
-    _happiness = 50;
 }
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    _happiness = 50;
+    [self updateHappinessLabel];
 }
 
 - (void)didDeactivate {
@@ -47,7 +45,7 @@
         [self changeImage:@"contentPusheen" duration:0.5];
     });
     
-    _happiness += 5;
+    [self addHappiness:5];
 }
 
 - (IBAction)doMenuParty {
@@ -59,7 +57,7 @@
         [self changeImage:@"contentPusheen" duration:0.3];
     });
     
-    _happiness += 5;
+    [self addHappiness:5];
 }
 
 - (IBAction)doMenuPlay {
@@ -72,7 +70,7 @@
         [self changeImage:@"contentPusheen" duration:0.5];
     });
     
-    _happiness += 5;
+    [self addHappiness:5];
 }
 
 - (void)changeImage:(NSString *)imageSetName duration:(double)duration {
@@ -81,18 +79,23 @@
                                                 duration:duration
                                              repeatCount:0];
 }
+//
+//- (int) happiness {
+//    return _happiness;
+//}
 
-- (int) happiness {
-    return _happiness;
-}
+//- (void) setHappiness:(int)happiness {
+//    _happiness = happiness;
+//    [self updateHappinessLabel];
+//}
 
-- (void) setHappiness:(int)happiness {
-    _happiness = happiness;
+- (void)addHappiness:(int)increment{
+    _happiness += increment;
     [self updateHappinessLabel];
 }
 
 - (void) updateHappinessLabel {
-    int newHappiness = MAX(100, _happiness);
+    int newHappiness = MIN(100, _happiness);
     _happinessLabel.text = [NSString stringWithFormat:@"%d%%", newHappiness];
 }
 

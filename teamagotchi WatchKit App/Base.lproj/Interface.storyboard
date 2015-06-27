@@ -37,7 +37,7 @@
                                     <action selector="doMenuPlay" destination="AgC-eL-Hgc" id="kS6-c6-4yK"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Feed" image="eating" id="UjJ-t1-tF2">
+                            <menuItem title="Feed" icon="decline" id="UjJ-t1-tF2">
                                 <connections>
                                     <action selector="doMenuFeed" destination="AgC-eL-Hgc" id="TQN-ft-ktE"/>
                                 </connections>

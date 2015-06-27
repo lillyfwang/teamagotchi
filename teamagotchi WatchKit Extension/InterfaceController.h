@@ -24,4 +24,6 @@
 
 - (void) updateHappinessLabel;
 
+- (void)addHappiness:(int)increment;
+
 @end
