@@ -29,6 +29,8 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _happiness = [defaults integerForKey:@"savedHappiness"];
+    NSInteger notFirstLaunch = [defaults integerForKey:@"firstLaunch"];
+    if (!notFirstLaunch && _happiness == 0) _happiness = 100;
     NSDate *lastDate = [defaults objectForKey:@"lastCloseDate"];
     NSTimeInterval timeDiff = [[NSDate date] timeIntervalSinceDate:lastDate];
     double happinessChange = timeDiff / 5;
@@ -43,6 +45,7 @@
     
     [defaults setObject:[NSDate date] forKey:@"lastCloseDate"];
     [defaults setInteger:_happiness forKey:@"savedHappiness"];
+    [defaults setInteger:1 forKey:@"notFirstLaunch"];
     [defaults synchronize];
     
     [super didDeactivate];
