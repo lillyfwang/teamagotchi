@@ -14,6 +14,13 @@
 		FD6C35EF1B3E6E49009386F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6C35EE1B3E6E49009386F6 /* Images.xcassets */; };
 		FD6C35F21B3E6E49009386F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6C35F01B3E6E49009386F6 /* LaunchScreen.xib */; };
 		FD6C35FE1B3E6E49009386F6 /* teamagotchiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C35FD1B3E6E49009386F6 /* teamagotchiTests.m */; };
+		FD6C36121B3E6E75009386F6 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C36111B3E6E75009386F6 /* InterfaceController.m */; };
+		FD6C36151B3E6E75009386F6 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C36141B3E6E75009386F6 /* NotificationController.m */; };
+		FD6C36171B3E6E75009386F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6C36161B3E6E75009386F6 /* Images.xcassets */; };
+		FD6C361B1B3E6E75009386F6 /* teamagotchi WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = FD6C361A1B3E6E75009386F6 /* teamagotchi WatchKit App.app */; };
+		FD6C36231B3E6E75009386F6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD6C36211B3E6E75009386F6 /* Interface.storyboard */; };
+		FD6C36251B3E6E75009386F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6C36241B3E6E75009386F6 /* Images.xcassets */; };
+		FD6C36281B3E6E75009386F6 /* teamagotchi WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FD6C360B1B3E6E74009386F6 /* teamagotchi WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +31,35 @@
 			remoteGlobalIDString = FD6C35DD1B3E6E49009386F6;
 			remoteInfo = teamagotchi;
 		};
+		FD6C361C1B3E6E75009386F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD6C35D61B3E6E49009386F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD6C36191B3E6E75009386F6;
+			remoteInfo = "teamagotchi WatchKit App";
+		};
+		FD6C36261B3E6E75009386F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD6C35D61B3E6E49009386F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD6C360A1B3E6E74009386F6;
+			remoteInfo = "teamagotchi WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD6C362F1B3E6E75009386F6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FD6C36281B3E6E75009386F6 /* teamagotchi WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD6C35DE1B3E6E49009386F6 /* teamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +75,18 @@
 		FD6C35F71B3E6E49009386F6 /* teamagotchiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teamagotchiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6C35FC1B3E6E49009386F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD6C35FD1B3E6E49009386F6 /* teamagotchiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = teamagotchiTests.m; sourceTree = "<group>"; };
+		FD6C360B1B3E6E74009386F6 /* teamagotchi WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "teamagotchi WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6C360E1B3E6E75009386F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD6C360F1B3E6E75009386F6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FD6C36101B3E6E75009386F6 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		FD6C36111B3E6E75009386F6 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		FD6C36131B3E6E75009386F6 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		FD6C36141B3E6E75009386F6 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		FD6C36161B3E6E75009386F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FD6C361A1B3E6E75009386F6 /* teamagotchi WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teamagotchi WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6C36201B3E6E75009386F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD6C36221B3E6E75009386F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FD6C36241B3E6E75009386F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +104,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD6C36081B3E6E74009386F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +119,8 @@
 			children = (
 				FD6C35E01B3E6E49009386F6 /* teamagotchi */,
 				FD6C35FA1B3E6E49009386F6 /* teamagotchiTests */,
+				FD6C360C1B3E6E74009386F6 /* teamagotchi WatchKit Extension */,
+				FD6C361E1B3E6E75009386F6 /* teamagotchi WatchKit App */,
 				FD6C35DF1B3E6E49009386F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +130,8 @@
 			children = (
 				FD6C35DE1B3E6E49009386F6 /* teamagotchi.app */,
 				FD6C35F71B3E6E49009386F6 /* teamagotchiTests.xctest */,
+				FD6C360B1B3E6E74009386F6 /* teamagotchi WatchKit Extension.appex */,
+				FD6C361A1B3E6E75009386F6 /* teamagotchi WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +177,46 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FD6C360C1B3E6E74009386F6 /* teamagotchi WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FD6C36101B3E6E75009386F6 /* InterfaceController.h */,
+				FD6C36111B3E6E75009386F6 /* InterfaceController.m */,
+				FD6C36131B3E6E75009386F6 /* NotificationController.h */,
+				FD6C36141B3E6E75009386F6 /* NotificationController.m */,
+				FD6C36161B3E6E75009386F6 /* Images.xcassets */,
+				FD6C360D1B3E6E75009386F6 /* Supporting Files */,
+			);
+			path = "teamagotchi WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		FD6C360D1B3E6E75009386F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD6C360E1B3E6E75009386F6 /* Info.plist */,
+				FD6C360F1B3E6E75009386F6 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD6C361E1B3E6E75009386F6 /* teamagotchi WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				FD6C36211B3E6E75009386F6 /* Interface.storyboard */,
+				FD6C36241B3E6E75009386F6 /* Images.xcassets */,
+				FD6C361F1B3E6E75009386F6 /* Supporting Files */,
+			);
+			path = "teamagotchi WatchKit App";
+			sourceTree = "<group>";
+		};
+		FD6C361F1B3E6E75009386F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD6C36201B3E6E75009386F6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,10 +227,12 @@
 				FD6C35DA1B3E6E49009386F6 /* Sources */,
 				FD6C35DB1B3E6E49009386F6 /* Frameworks */,
 				FD6C35DC1B3E6E49009386F6 /* Resources */,
+				FD6C362F1B3E6E75009386F6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FD6C36271B3E6E75009386F6 /* PBXTargetDependency */,
 			);
 			name = teamagotchi;
 			productName = teamagotchi;
@@ -157,6 +257,39 @@
 			productReference = FD6C35F71B3E6E49009386F6 /* teamagotchiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FD6C360A1B3E6E74009386F6 /* teamagotchi WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD6C362C1B3E6E75009386F6 /* Build configuration list for PBXNativeTarget "teamagotchi WatchKit Extension" */;
+			buildPhases = (
+				FD6C36071B3E6E74009386F6 /* Sources */,
+				FD6C36081B3E6E74009386F6 /* Frameworks */,
+				FD6C36091B3E6E74009386F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD6C361D1B3E6E75009386F6 /* PBXTargetDependency */,
+			);
+			name = "teamagotchi WatchKit Extension";
+			productName = "teamagotchi WatchKit Extension";
+			productReference = FD6C360B1B3E6E74009386F6 /* teamagotchi WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		FD6C36191B3E6E75009386F6 /* teamagotchi WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD6C36291B3E6E75009386F6 /* Build configuration list for PBXNativeTarget "teamagotchi WatchKit App" */;
+			buildPhases = (
+				FD6C36181B3E6E75009386F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "teamagotchi WatchKit App";
+			productName = "teamagotchi WatchKit App";
+			productReference = FD6C361A1B3E6E75009386F6 /* teamagotchi WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +305,12 @@
 					FD6C35F61B3E6E49009386F6 = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = FD6C35DD1B3E6E49009386F6;
+					};
+					FD6C360A1B3E6E74009386F6 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					FD6C36191B3E6E75009386F6 = {
+						CreatedOnToolsVersion = 6.3.2;
 					};
 				};
 			};
@@ -190,6 +329,8 @@
 			targets = (
 				FD6C35DD1B3E6E49009386F6 /* teamagotchi */,
 				FD6C35F61B3E6E49009386F6 /* teamagotchiTests */,
+				FD6C360A1B3E6E74009386F6 /* teamagotchi WatchKit Extension */,
+				FD6C36191B3E6E75009386F6 /* teamagotchi WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +350,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD6C36091B3E6E74009386F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6C36171B3E6E75009386F6 /* Images.xcassets in Resources */,
+				FD6C361B1B3E6E75009386F6 /* teamagotchi WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD6C36181B3E6E75009386F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6C36231B3E6E75009386F6 /* Interface.storyboard in Resources */,
+				FD6C36251B3E6E75009386F6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +392,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD6C36071B3E6E74009386F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6C36151B3E6E75009386F6 /* NotificationController.m in Sources */,
+				FD6C36121B3E6E75009386F6 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +408,16 @@
 			isa = PBXTargetDependency;
 			target = FD6C35DD1B3E6E49009386F6 /* teamagotchi */;
 			targetProxy = FD6C35F81B3E6E49009386F6 /* PBXContainerItemProxy */;
+		};
+		FD6C361D1B3E6E75009386F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD6C36191B3E6E75009386F6 /* teamagotchi WatchKit App */;
+			targetProxy = FD6C361C1B3E6E75009386F6 /* PBXContainerItemProxy */;
+		};
+		FD6C36271B3E6E75009386F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD6C360A1B3E6E74009386F6 /* teamagotchi WatchKit Extension */;
+			targetProxy = FD6C36261B3E6E75009386F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -258,6 +436,14 @@
 				FD6C35F11B3E6E49009386F6 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		FD6C36211B3E6E75009386F6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD6C36221B3E6E75009386F6 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -397,6 +583,62 @@
 			};
 			name = Release;
 		};
+		FD6C362A1B3E6E75009386F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = teamagotchi_WatchKit_Extension;
+				INFOPLIST_FILE = "teamagotchi WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		FD6C362B1B3E6E75009386F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = teamagotchi_WatchKit_Extension;
+				INFOPLIST_FILE = "teamagotchi WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		FD6C362D1B3E6E75009386F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "teamagotchi WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FD6C362E1B3E6E75009386F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "teamagotchi WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -422,6 +664,22 @@
 			buildConfigurations = (
 				FD6C36051B3E6E49009386F6 /* Debug */,
 				FD6C36061B3E6E49009386F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD6C36291B3E6E75009386F6 /* Build configuration list for PBXNativeTarget "teamagotchi WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD6C362A1B3E6E75009386F6 /* Debug */,
+				FD6C362B1B3E6E75009386F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD6C362C1B3E6E75009386F6 /* Build configuration list for PBXNativeTarget "teamagotchi WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD6C362D1B3E6E75009386F6 /* Debug */,
+				FD6C362E1B3E6E75009386F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
