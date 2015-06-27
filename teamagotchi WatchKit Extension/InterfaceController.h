@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *happinessLabel;
 @property (weak, nonatomic) IBOutlet WKInterfaceImage *primaryIcon;
 @property (weak, nonatomic) IBOutlet WKInterfaceImage *secondaryIcon;
-@property int happiness;
+@property NSInteger happiness;
 
 - (IBAction)doMenuPlay;
 
