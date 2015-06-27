@@ -22,6 +22,8 @@
 
 - (IBAction)doMenuParty;
 
+- (IBAction)doMenuCostume;
+
 - (void) updateHappinessLabel;
 
 - (void)addHappiness:(int)increment;

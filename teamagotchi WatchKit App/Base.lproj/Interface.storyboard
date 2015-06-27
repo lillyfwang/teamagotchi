@@ -47,6 +47,11 @@
                                     <action selector="doMenuParty" destination="AgC-eL-Hgc" id="Xnh-oA-GKd"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Costume" icon="speaker" id="u2o-P7-OL1">
+                                <connections>
+                                    <action selector="doMenuCostume" destination="AgC-eL-Hgc" id="ZmM-ok-dhf"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <color key="backgroundColor" red="0.9882352941176471" green="0.95294117647058818" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

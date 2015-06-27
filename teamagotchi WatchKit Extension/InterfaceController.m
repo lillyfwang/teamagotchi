@@ -60,6 +60,19 @@
     [self addHappiness:5];
 }
 
+- (IBAction)doMenuCostume {
+    NSArray *plays = @[@"dinoPusheen", @"nutellaPusheen"];
+    NSString *randomPlay = plays[arc4random()%2];
+    
+    [self changeImage:randomPlay duration:1];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self changeImage:@"contentPusheen" duration:0.3];
+    });
+    
+    [self addHappiness:5];
+}
+
 - (IBAction)doMenuPlay {
     NSArray *plays = @[@"burritoPusheen", @"boxPusheen"];
     NSString *randomPlay = plays[arc4random()%2];
