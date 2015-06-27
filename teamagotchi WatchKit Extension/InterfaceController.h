@@ -15,6 +15,8 @@
 
 - (IBAction)doMenuPlay;
 
-//- (void)handleTap:(UITapGestureRecognizer *)sender;
+- (IBAction)doMenuFeed;
+
+- (IBAction)doMenuParty;
 
 @end

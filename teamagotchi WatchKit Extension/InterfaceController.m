@@ -34,6 +34,13 @@
     [super didDeactivate];
 }
 
+- (IBAction)doMenuFeed {
+    
+}
+
+- (IBAction)doMenuParty {
+}
+
 - (IBAction)doMenuPlay {
     NSArray *plays = @[@"burritoPusheen", @"boxPusheen"];
     NSString *randomPlay = plays[arc4random()%2];
