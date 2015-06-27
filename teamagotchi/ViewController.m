@@ -33,8 +33,35 @@
     // Request to turn on accelerometer and begin receiving accelerometer events
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
+    
+    // Create a mutable set to store the category definitions.
+    NSMutableSet* categories = [NSMutableSet set];
+    
+    // Define the actions for a meeting invite notification.
+    UIMutableUserNotificationAction* acceptAction = [[UIMutableUserNotificationAction alloc] init];
+    acceptAction.title = NSLocalizedString(@"Log", @"Log workout");
+    acceptAction.identifier = @"log";
+    acceptAction.activationMode = UIUserNotificationActivationModeForeground; //UIUserNotificationActivationModeBackground if no need in foreground.
+    acceptAction.authenticationRequired = NO;
+    
+    // Create the category object and add it to the set.
+    UIMutableUserNotificationCategory* inviteCategory = [[UIMutableUserNotificationCategory alloc] init];
+    [inviteCategory setActions:@[acceptAction]
+                    forContext:UIUserNotificationActionContextDefault];
+    inviteCategory.identifier = @"log";
+    
+    [categories addObject:inviteCategory];
+    
+    // Configure other actions and categories and add them to the set...
+    
+    UIUserNotificationSettings* settings = [UIUserNotificationSettings settingsForTypes:
+                                            (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound)
+                                                                             categories:categories];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
-        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:nil]];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:categories]];
     }
     
     [super viewDidLoad];
@@ -70,8 +97,8 @@
         
         UILocalNotification *notification = [[UILocalNotification alloc] init];
         if (notification) {
-            notification.alertBody = @"This is local notification from shake";
-            notification.alertAction = @"View Details";
+            notification.alertBody = @"Congrats! You earned a workout!";
+            notification.alertAction = @"Log workout";
             notification.fireDate = [NSDate dateWithTimeIntervalSinceNow: 5];
             notification.soundName = UILocalNotificationDefaultSoundName;
             [[UIApplication sharedApplication] scheduleLocalNotification:notification];

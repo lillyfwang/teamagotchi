@@ -44,7 +44,10 @@
     //
     // After populating your dynamic notification interface call the completion block.
     completionHandler(WKUserNotificationInterfaceTypeCustom);
+    
 }
+
+
 
 
 /*
