@@ -56,7 +56,7 @@
     [_cookiePusheenImage setImageNamed:imageSetName];
     [_cookiePusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
                                                 duration:duration
-                                             repeatCount:10];
+                                             repeatCount:0];
 }
 
 @end
