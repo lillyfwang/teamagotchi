@@ -7,6 +7,7 @@
 //
 
 #import "InterfaceController.h"
+#import "stdlib.h"
 
 
 @interface InterfaceController()
@@ -34,8 +35,10 @@
 }
 
 - (IBAction)doMenuPlay {
+    NSArray *plays = @[@"burritoPusheen", @"boxPusheen"];
+    NSString *randomPlay = plays[arc4random()%2];
     
-    [self changeImage:@"burritoPusheen" duration:1];
+    [self changeImage:randomPlay duration:1];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self changeImage:@"cookiePusheen" duration:0.5];
