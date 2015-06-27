@@ -33,6 +33,13 @@
     [super didDeactivate];
 }
 
+- (IBAction)doMenuFeed {
+    
+}
+
+- (IBAction)doMenuParty {
+}
+
 - (IBAction)doMenuPlay {
     
     [self changeImage:@"burritoPusheen" duration:1];
