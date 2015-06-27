@@ -14,8 +14,10 @@
                             <items>
                                 <group alignment="left" id="eZc-k2-NLx" userLabel="Happiness Status Group">
                                     <items>
-                                        <imageView width="24" height="22" alignment="left" id="Stv-pv-7R2" userLabel="Heart Icon"/>
-                                        <label alignment="left" text="100%" id="SAK-mB-oDj"/>
+                                        <imageView width="9" height="9" alignment="left" verticalAlignment="center" image="heart" id="Stv-pv-7R2" userLabel="Heart Icon"/>
+                                        <label alignment="left" text="100%" id="SAK-mB-oDj">
+                                            <color key="textColor" red="0.22745098039215686" green="0.12156862745098039" blue="0.031372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
                                     </items>
                                 </group>
                                 <group alignment="right" id="99h-Vg-NE2" userLabel="Status Icon Group">
@@ -26,7 +28,7 @@
                                 </group>
                             </items>
                         </group>
-                        <imageView width="136" height="137" alignment="left" image="contentPusheen" contentMode="scaleAspectFit" animationDuration="0.5" id="QaK-SH-OJw"/>
+                        <imageView width="136" height="117" alignment="left" verticalAlignment="center" image="contentPusheen" contentMode="scaleAspectFit" animationDuration="0.5" id="QaK-SH-OJw"/>
                     </items>
                     <menu key="menu" id="3Ga-vn-GSR">
                         <items>
@@ -35,7 +37,7 @@
                                     <action selector="doMenuPlay" destination="AgC-eL-Hgc" id="kS6-c6-4yK"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Feed" icon="accept" id="UjJ-t1-tF2">
+                            <menuItem title="Feed" icon="decline" id="UjJ-t1-tF2">
                                 <connections>
                                     <action selector="doMenuFeed" destination="AgC-eL-Hgc" id="TQN-ft-ktE"/>
                                 </connections>
@@ -47,6 +49,7 @@
                             </menuItem>
                         </items>
                     </menu>
+                    <color key="backgroundColor" red="0.9882352941176471" green="0.95294117647058818" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="happinessLabel" destination="SAK-mB-oDj" id="TAo-Ne-ZYK"/>
                         <outlet property="primaryIcon" destination="lCh-Fs-1t6" id="Cne-Am-TCz"/>
@@ -55,7 +58,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="237" y="245.5"/>
+            <point key="canvasLocation" x="237" y="238"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -85,4 +88,5 @@
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.9882352941176471" green="0.95294117647058818" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

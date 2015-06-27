@@ -26,6 +26,8 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    _happiness = 50;
+    [self updateHappinessLabel];
 }
 
 - (void)didDeactivate {
@@ -43,6 +45,7 @@
         [self changeImage:@"contentPusheen" duration:0.5];
     });
     
+    [self addHappiness:5];
 }
 
 - (IBAction)doMenuParty {
@@ -53,6 +56,8 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self changeImage:@"contentPusheen" duration:0.3];
     });
+    
+    [self addHappiness:5];
 }
 
 - (IBAction)doMenuPlay {
@@ -64,6 +69,8 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self changeImage:@"contentPusheen" duration:0.5];
     });
+    
+    [self addHappiness:5];
 }
 
 - (void)changeImage:(NSString *)imageSetName duration:(double)duration {
@@ -72,6 +79,25 @@
                                                 duration:duration
                                              repeatCount:0];
 }
+
+- (void)addHappiness:(int)increment{
+    _happiness += increment;
+    [self updateHappinessLabel];
+}
+
+- (void) updateHappinessLabel {
+    int newHappiness = MIN(100, _happiness);
+    _happinessLabel.text = [NSString stringWithFormat:@"%d%%", newHappiness];
+}
+
+/*
+private func changeHappiness() {
+    let lastDate = defaults.objectForKey("lastCloseDate")
+    let timeDiff = NSDate.timeIntervalSinceDate(lastDate)
+    let happinessChange = timeDiff / 60
+    happiness -= happinessChange
+}
+*/
 
 @end
 
