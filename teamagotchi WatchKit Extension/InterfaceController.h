@@ -10,5 +10,11 @@
 #import <Foundation/Foundation.h>
 
 @interface InterfaceController : WKInterfaceController
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *cookiePusheenImage;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *burritoPusheenImage;
+
+- (IBAction)doMenuPlay;
+
+//- (void)handleTap:(UITapGestureRecognizer *)sender;
 
 @end

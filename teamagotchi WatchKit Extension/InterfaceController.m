@@ -25,12 +25,32 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    [_burritoPusheenImage setHidden:YES];
 }
 
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
+
+- (IBAction)doMenuPlay {
+    
+    
+    [_burritoPusheenImage setHidden:NO];
+    [_cookiePusheenImage setHidden:YES];
+    
+    
+    
+}
+
+//- (void)handleTap:(UITapGestureRecognizer *)sender
+//{
+//    if (sender.state == UIGestureRecognizerStateEnded)
+//    {
+//        // handling code
+//    }
+//}
 
 @end
 
