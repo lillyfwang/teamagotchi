@@ -19,13 +19,24 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self becomeFirstResponder];
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
+}
+
 
 -(void) viewDidLoad {
     // Request to turn on accelerometer and begin receiving accelerometer events
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:nil]];
+    }
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     currentMaxAccelX = 0;
@@ -56,8 +67,18 @@
     {
         // User was shaking the device. Post a notification named "shake."
         [[NSNotificationCenter defaultCenter] postNotificationName:@"shake" object:self];
+        
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        if (notification) {
+            notification.alertBody = @"This is local notification from shake";
+            notification.alertAction = @"View Details";
+            notification.fireDate = [NSDate dateWithTimeIntervalSinceNow: 5];
+            notification.soundName = UILocalNotificationDefaultSoundName;
+            [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+        }
     }
 }
+
 
 
 
@@ -125,11 +146,11 @@
     // Respond to changes in device orientation
 }
 
--(void) viewDidDisappear {
+/*-(void) viewDidDisappear {
     // Request to stop receiving accelerometer events and turn off accelerometer
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
-}
+}*/
 
 
 - (void)didReceiveMemoryWarning {
