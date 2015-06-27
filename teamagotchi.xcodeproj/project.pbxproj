@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F435DD11B3F23EF00CDE1AD /* HealthKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F435DD01B3F23EF00CDE1AD /* HealthKitController.m */; };
+		4F435DD21B3F23EF00CDE1AD /* HealthKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F435DD01B3F23EF00CDE1AD /* HealthKitController.m */; };
 		FD6C35E41B3E6E49009386F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C35E31B3E6E49009386F6 /* main.m */; };
 		FD6C35E71B3E6E49009386F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C35E61B3E6E49009386F6 /* AppDelegate.m */; };
 		FD6C35EA1B3E6E49009386F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C35E91B3E6E49009386F6 /* ViewController.m */; };
@@ -62,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F435DD01B3F23EF00CDE1AD /* HealthKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitController.m; sourceTree = "<group>"; };
+		4F435DD31B3F241900CDE1AD /* HealthKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitController.h; sourceTree = "<group>"; };
 		C5BE5AC61B3F20FC00564FB8 /* teamagotchi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = teamagotchi.entitlements; sourceTree = "<group>"; };
 		FD6C35DE1B3E6E49009386F6 /* teamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6C35E21B3E6E49009386F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				FD6C35EE1B3E6E49009386F6 /* Images.xcassets */,
 				FD6C35F01B3E6E49009386F6 /* LaunchScreen.xib */,
 				FD6C35E11B3E6E49009386F6 /* Supporting Files */,
+				4F435DD01B3F23EF00CDE1AD /* HealthKitController.m */,
+				4F435DD31B3F241900CDE1AD /* HealthKitController.h */,
 			);
 			path = teamagotchi;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 			files = (
 				FD6C35EA1B3E6E49009386F6 /* ViewController.m in Sources */,
 				FD6C35E71B3E6E49009386F6 /* AppDelegate.m in Sources */,
+				4F435DD11B3F23EF00CDE1AD /* HealthKitController.m in Sources */,
 				FD6C35E41B3E6E49009386F6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F435DD21B3F23EF00CDE1AD /* HealthKitController.m in Sources */,
 				FD6C36151B3E6E75009386F6 /* NotificationController.m in Sources */,
 				FD6C36121B3E6E75009386F6 /* InterfaceController.m in Sources */,
 			);
