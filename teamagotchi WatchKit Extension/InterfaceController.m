@@ -26,12 +26,25 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
-    _happiness = 50;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _happiness = [defaults integerForKey:@"savedHappiness"];
+    NSDate *lastDate = [defaults objectForKey:@"lastCloseDate"];
+    NSTimeInterval timeDiff = [[NSDate date] timeIntervalSinceDate:lastDate];
+    double happinessChange = timeDiff / 5;
+    _happiness -= happinessChange;
+    
     [self updateHappinessLabel];
 }
 
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:[NSDate date] forKey:@"lastCloseDate"];
+    [defaults setInteger:_happiness forKey:@"savedHappiness"];
+    [defaults synchronize];
+    
     [super didDeactivate];
 }
 
@@ -86,8 +99,8 @@
 }
 
 - (void) updateHappinessLabel {
-    int newHappiness = MIN(100, _happiness);
-    _happinessLabel.text = [NSString stringWithFormat:@"%d%%", newHappiness];
+    NSInteger newHappiness = MAX(0, MIN(100, _happiness));
+    _happinessLabel.text = [NSString stringWithFormat:@"%d%%", (int)newHappiness];
 }
 
 /*
