@@ -18,14 +18,13 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-
+    
     // Configure interface objects here.
 }
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
-    
     [_burritoPusheenImage setHidden:YES];
 }
 
@@ -36,21 +35,19 @@
 
 - (IBAction)doMenuPlay {
     
+    [self changeImage:@"burritoPusheen" duration:1];
     
-    [_burritoPusheenImage setHidden:NO];
-    [_cookiePusheenImage setHidden:YES];
-    
-    
-    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self changeImage:@"cookiePusheen" duration:0.5];
+    });
 }
 
-//- (void)handleTap:(UITapGestureRecognizer *)sender
-//{
-//    if (sender.state == UIGestureRecognizerStateEnded)
-//    {
-//        // handling code
-//    }
-//}
+- (void)changeImage:(NSString *)imageSetName duration:(double)duration {
+    [_cookiePusheenImage setImageNamed:imageSetName];
+    [_cookiePusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
+                                                duration:duration
+                                             repeatCount:10];
+}
 
 @end
 
