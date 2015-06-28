@@ -49,7 +49,13 @@
     // Populate your dynamic notification interface as quickly as possible.
     //
     // After populating your dynamic notification interface call the completion block.
+    
+    
     completionHandler(WKUserNotificationInterfaceTypeCustom);
+ 
+}
+
+-(IBAction)workoutLog:(id)sender {
     
 }
 
