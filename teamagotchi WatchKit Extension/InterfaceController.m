@@ -36,6 +36,12 @@
     double happinessChange = timeDiff / 10;
     _happiness -= happinessChange;
     
+    NSInteger gotNotification = [defaults integerForKey:@"gotNotification"];
+    if (gotNotification) {
+        _happiness += 10;
+        [self doWorkout];
+    }
+    
     [self updateHappinessLabel];
     
     if (_happiness <= 50) {
