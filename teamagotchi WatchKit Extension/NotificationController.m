@@ -7,6 +7,7 @@
 //
 
 #import "NotificationController.h"
+#import "InterfaceController.h"
 
 
 @interface NotificationController()
@@ -21,7 +22,6 @@
     if (self){
         // Initialize variables here.
         // Configure interface objects here.
-        
     }
     return self;
 }
@@ -33,6 +33,12 @@
 
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
+    
+    // notification hack
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:1 forKey:@"gotNotification"];
+    [defaults synchronize];
+    
     [super didDeactivate];
 }
 
