@@ -26,6 +26,8 @@
 
 - (void) updateHappinessLabel;
 
+- (void) doWorkout;
+
 - (void)addHappiness:(int)increment;
 
 @end
