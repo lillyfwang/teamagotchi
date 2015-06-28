@@ -9,8 +9,8 @@
     
     "WatchKit Simulator Actions": [
         {
-            "title": "Workout Pusheen",
-            "identifier": "firstButtonAction"
+            "title": "Log Workout",
+            "identifier": "log_workout"
         }
     ],
     

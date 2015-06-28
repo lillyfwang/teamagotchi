@@ -39,8 +39,8 @@
     
     // Define the actions for a meeting invite notification.
     UIMutableUserNotificationAction* acceptAction = [[UIMutableUserNotificationAction alloc] init];
-    acceptAction.title = NSLocalizedString(@"Log", @"Log workout");
-    acceptAction.identifier = @"Workout";
+    acceptAction.title = NSLocalizedString(@"Log", @"Log Workout");
+    acceptAction.identifier = @"log_workout";
     acceptAction.activationMode = UIUserNotificationActivationModeForeground; //UIUserNotificationActivationModeBackground if no need in foreground.
     acceptAction.authenticationRequired = NO;
     
