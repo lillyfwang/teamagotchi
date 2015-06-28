@@ -32,19 +32,24 @@
                     </items>
                     <menu key="menu" id="3Ga-vn-GSR">
                         <items>
-                            <menuItem title="Play" icon="play" id="Rpn-se-4cW">
+                            <menuItem title="Play" image="play" id="Rpn-se-4cW">
                                 <connections>
                                     <action selector="doMenuPlay" destination="AgC-eL-Hgc" id="kS6-c6-4yK"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Feed" icon="decline" id="UjJ-t1-tF2">
+                            <menuItem title="Feed" image="feed" id="UjJ-t1-tF2">
                                 <connections>
                                     <action selector="doMenuFeed" destination="AgC-eL-Hgc" id="TQN-ft-ktE"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Party" icon="block" id="hbe-0G-aYD">
+                            <menuItem title="Party" image="party" id="hbe-0G-aYD">
                                 <connections>
                                     <action selector="doMenuParty" destination="AgC-eL-Hgc" id="Xnh-oA-GKd"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Costume" image="costume" id="u2o-P7-OL1">
+                                <connections>
+                                    <action selector="doMenuCostume" destination="AgC-eL-Hgc" id="ZmM-ok-dhf"/>
                                 </connections>
                             </menuItem>
                         </items>

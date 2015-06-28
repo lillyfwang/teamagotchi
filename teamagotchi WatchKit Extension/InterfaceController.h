@@ -22,7 +22,11 @@
 
 - (IBAction)doMenuParty;
 
+- (IBAction)doMenuCostume;
+
 - (void) updateHappinessLabel;
+
+- (void) doWorkout;
 
 - (void)addHappiness:(int)increment;
 
