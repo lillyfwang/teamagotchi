@@ -47,7 +47,7 @@
     if (_happiness <= 50) {
         [self changeImage:@"sadPusheen" duration:0.3];
     } else {
-        [self changeImage:@"normal" duration:0.3];
+        [self changeImage:@"contentPusheen" duration:0.3];
     }
 
 }
@@ -74,7 +74,7 @@
         if (_happiness <= 50) {
             [self changeImage:@"sadPusheen" duration:0.3];
         } else {
-            [self changeImage:@"normal" duration:0.3];
+            [self changeImage:@"contentPusheen" duration:0.3];
         }
     });
     
@@ -90,7 +90,7 @@
         if (_happiness <= 50) {
             [self changeImage:@"sadPusheen" duration:0.3];
         } else {
-            [self changeImage:@"normal" duration:0.3];
+            [self changeImage:@"contentPusheen" duration:0.3];
         }
     });
     
@@ -107,7 +107,7 @@
         if (_happiness <= 50) {
             [self changeImage:@"sadPusheen" duration:0.3];
         } else {
-            [self changeImage:@"normal" duration:0.3];
+            [self changeImage:@"contentPusheen" duration:0.3];
         }
     });
     
@@ -124,7 +124,7 @@
         if (_happiness <= 50) {
             [self changeImage:@"sadPusheen" duration:0.3];
         } else {
-            [self changeImage:@"normal" duration:0.3];
+            [self changeImage:@"contentPusheen" duration:0.3];
         }
     });
     
@@ -140,7 +140,7 @@
         if (_happiness <= 50) {
             [self changeImage:@"sadPusheen" duration:0.3];
         } else {
-            [self changeImage:@"normal" duration:0.3];
+            [self changeImage:@"contentPusheen" duration:0.3];
         }
     });
     
@@ -149,20 +149,10 @@
 
 - (void)changeImage:(NSString *)imageSetName duration:(double)duration {
     [_pusheenImage setImageNamed:imageSetName];
-    if ([imageSetName  isEqual: @"normal"]) {
-        NSArray *normal = @[@"laserPusheen", @"contentPusheen"];
-        NSString *name = normal[arc4random()%2];
-        
-        [_pusheenImage setImageNamed:name];
-        if ([name isEqual: @"laserPusheen"]) {
-            [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 14)
-                                                  duration:1
-                                               repeatCount:0];
-        } else {
-            [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
+    if ([imageSetName  isEqual: @"contentPusheen"]) {
+       [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
                                                   duration:duration
                                                repeatCount:0];
-        }
     } else {
         [_pusheenImage startAnimatingWithImagesInRange: NSMakeRange(0, 4)
                                               duration:duration
